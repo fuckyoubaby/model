@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  default-access="field">
+   <class name="com.changhong.system.domain.uploaddata.UploadADData" table="ad_data_upload">
+        <id name="uuid" column="uuid" length="22" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="uploadDate" column="upload_date" insert="true" update="true" type="java.util.Date"/>
+        <property name="times" column="times" insert="true" update="true" type="java.lang.Integer"/>
+        <property name="duration" column="duration" precision="15" scale="2" insert="true" update="true" type="java.math.BigDecimal"/>
+        <property name="totalTime" column="total_time" precision="15" scale="2" insert="true" update="true" type="java.math.BigDecimal"/>
+        <property name="macNumber" column="mac_number" length="17" insert="true" update="true" type="java.lang.String"/>
+        <many-to-one name="adverResource" column="adr_uuid" class="com.changhong.system.domain.advertisment.AdverResource" lazy="proxy" cascade="none" insert="true" update="true"/>
+    </class>
+
+</hibernate-mapping>

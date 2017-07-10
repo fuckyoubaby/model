@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+  
+  <!-- content upgrade table config -->
+ 
+
+ <!-- play content table config -->
+  <class name="com.changhong.system.domain.advertisment.PlayContent" table="play_content">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="create_date" type="java.util.Date"/>
+        <property name="name" column="name" insert="true" update="true" type="java.lang.String" />
+        <property name="version" column="version" insert="true" update="true" type="java.lang.String"/>
+        <property name="amount" column="amount" insert="true" update="true" type="java.lang.Integer"></property>
+        <property name="defaultDuration" column="default_duration" insert="true" update="true" type="java.lang.Double"/>
+        <bag name="playItems" table="play_item" cascade="save-update" lazy="true" order-by="item_index asc" inverse="true" >
+            <key column="content_uuid" not-null="false"/>
+            <one-to-many class="com.changhong.system.domain.advertisment.PlayItem"/>
+        </bag>
+        <many-to-one name="contentUpgrade" column="upgrade_id" class="com.changhong.system.domain.upgrade.ContentUpgrade" outer-join="true" unique="true" cascade="none" insert="true" update="true" not-found="ignore" ></many-to-one>
+    </class>
+    <class name="com.changhong.system.domain.advertisment.PlayItem" table="play_item">
+		<id name="uuid" column="uuid" type="java.lang.String" />
+		<property name="name" column="name" insert="true" update="true" type="java.lang.String" />
+		<property name="description" column="description" insert="true" update="true" type="java.lang.String" />
+		<property name="index" column="item_index" insert="true" update="true" type="java.lang.Integer"></property>
+		<property name="repeat" column="item_repeat" insert="true" update="true" type="java.lang.Integer"></property>
+		<property name="amount" column="amount" insert="true" update="true" type="java.lang.Integer"></property>
+		<property name="startDate" column="start_date" insert="true" update="true" type="java.util.Date" />
+		<property name="endDate" column="end_date" insert="true" update="true" type="java.util.Date" />
+		
+		<many-to-one name="playContent" column="content_uuid" class="com.changhong.system.domain.advertisment.PlayContent" lazy="proxy" cascade="none" insert="true" update="true" not-found="ignore"></many-to-one>      
+   		<bag name="playItemContents" table="play_item_content" cascade="all" lazy="true" order-by="item_index asc" inverse="true">
+            <key column="play_item_uuid"/>
+            <one-to-many class="com.changhong.system.domain.advertisment.PlayItemContent"/>
+        </bag>
+   
+    </class>
+        <class name="com.changhong.system.domain.advertisment.PlayItemContent" table="play_item_content">
+		<id name="uuid" column="uuid" type="java.lang.String" />
+		<property name="resourceUuid" column="resource_uuid" insert="true" update="true" type="java.lang.String" />
+		<property name="index" column="item_index" insert="true" update="true" type="java.lang.Integer"></property>
+		<property name="repeat" column="item_repeat" insert="true" update="true" type="java.lang.Integer"></property>
+		<property name="duration" column="item_duration" insert="true" update="true" type="java.lang.Double"></property>
+		<many-to-one name="playItem" column="play_item_uuid" class="com.changhong.system.domain.advertisment.PlayItem" lazy="proxy" cascade="none" insert="true" update="true" />      
+    </class>
+    
+    
+    
+    
+</hibernate-mapping>

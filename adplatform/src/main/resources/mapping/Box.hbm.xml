@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+    <class name="com.changhong.system.domain.box.Box" table="box_info">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="mac" column="mac_number" insert="true" update="true" type="java.lang.String"/>
+        <property name="ssidName" column="ssid_name" insert="true" update="true" type="java.lang.String"/>
+        <property name="ssidPassword" column="ssid_password" insert="true" update="true" type="java.lang.String"/>
+        <property name="note" column="mac_note" insert="true" update="true" type="java.lang.String"/>
+        <property name="firmwareVersion" column="mac_version" insert="true" update="true" type="java.lang.String"/>
+        <property name="lastReportTime" column="last_report_time" insert="true" update="true" type="java.util.Date"/>
+        <property name="cpuRate" column="cpu_rate" insert="true" update="true" type="java.lang.Integer"/>
+        <property name="memRate" column="mem_rate" insert="true" update="true" type="java.lang.Integer"/>
+        <property name="diskRate" column="disk_rate" insert="true" update="true" type="java.lang.Integer"/>
+        <property name="codeGenerateTime" column="last_code_time" insert="true" update="true" type="java.util.Date"/>
+        <property name="encryptCode" column="code_num" insert="true" update="true" type="java.lang.String"/>
+
+         <many-to-one name="community" column="community_uuid" class="com.changhong.system.domain.box.Community" lazy="proxy" cascade="none" insert="true" update="true"/>
+    </class>
+
+    <class name="com.changhong.system.domain.box.BoxCommand" table="box_command">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="mac" column="mac_number" insert="true" update="true" type="java.lang.String"/>
+        <property name="comment" column="comment" insert="true" update="true" type="java.lang.String"/>
+        <property name="planTime" column="command_plan" insert="true" update="true" type="java.lang.String"/>
+
+        <property name="commandType" column="command_type">
+            <type name="com.changhong.common.domain.EnumConverter">
+                <param name="enumClassName">com.changhong.system.domain.box.BoxCommandType</param>
+            </type>
+        </property>
+        <property name="finished" column="finished" insert="true" update="true" type="java.lang.Boolean"/>
+    </class>
+
+    <class name="com.changhong.system.domain.box.Area" table="box_area">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="name" column="name" insert="true" update="true" type="java.lang.String"/>
+
+        <many-to-one name="parentArea" column="parent_uuid" class="com.changhong.system.domain.box.Area" lazy="proxy" cascade="none" insert="true" update="true"/>
+
+        <bag name="childAreas" table="box_area" cascade="all" lazy="true" order-by="uuid asc">
+            <key column="parent_uuid"/>
+            <one-to-many class="com.changhong.system.domain.box.Area"/>
+        </bag>
+
+        <bag name="communities" table="box_community" cascade="all" lazy="true" order-by="uuid asc">
+            <key column="area_uuid"/>
+            <one-to-many class="com.changhong.system.domain.box.Community"/>
+        </bag>
+    </class>
+
+    <class name="com.changhong.system.domain.box.Community" table="box_community">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="name" column="name" insert="true" update="true" type="java.lang.String"/>
+        <property name="abbreviation" column="abbreviation" insert="true" update="true" type="java.lang.String"/>
+        <property name="comment" column="comment" insert="true" update="true" type="java.lang.String"/>
+
+        <many-to-one name="area" column="area_uuid" class="com.changhong.system.domain.box.Area" lazy="proxy" cascade="none" insert="true" update="true"/>
+        <many-to-one name="metaData" column="meta_data_uuid" class="com.changhong.system.domain.meta.MetaData" lazy="proxy" cascade="none" insert="true" update="true"/>
+    </class>
+    
+    <class name="com.changhong.system.domain.box.BoxMac" table="box_mac">
+    	<id name="uuid" column="uuid" type="java.lang.String" />
+    	<property name="timestamp" column="timestamp" type="java.util.Date" />
+    	<property name="mac" column="mac" type="java.lang.String" />
+    	<property name="macStatus" column="status">
+    		<type name="com.changhong.common.domain.EnumConverter">
+    			<param name="enumClassName">com.changhong.system.domain.box.BoxMacStatus</param>
+    		</type>
+    	</property>
+    </class>
+    
+   <class name="com.changhong.system.domain.box.BoxReport" table="box_report">
+    	<id name="uuid" column="uuid" type="java.lang.String" />
+    	<property name="timestamp" column="timestamp" type="java.util.Date" />
+    	<property name="mac" column="mac" type="java.lang.String" />
+    	<property name="code" column="code" type="java.lang.String" />
+    	<property name="status" column="status">
+    		<type name="com.changhong.common.domain.EnumConverter">
+    			<param name="enumClassName">com.changhong.system.domain.box.BoxReportStatus</param>
+    		</type>
+    	</property>
+    	<property name="solveTime" column="solvetime" insert="true" update="true" type="java.util.Date" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %C{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="SERVER_FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="MaxBackupIndex" value="10" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="File" value="../logs/ch_adelv_server.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %p %c: - %m\n" />
+		</layout>
+	</appender>
+
+    <appender name="CLIENT_FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="MaxBackupIndex" value="10" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="File" value="../logs/ch_adelv_client.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %p %c: - %m\n" />
+		</layout>
+	</appender>
+
+	<logger name="org.apache.commons" additivity="false">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.quartz" additivity="false">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.springframework" additivity="false">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.springframework.security" additivity="false">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.hibernate" additivity="false">
+		<level value="ERROR" />
+	</logger>
+    <logger name="org.ibatis" additivity="false">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.directwebremoting" additivity="false">
+		<level value="ERROR" />
+	</logger>
+	<logger name="com.changhong.server" additivity="false">
+		<level value="INFO" />
+        <appender-ref ref="SERVER_FILE" />
+	</logger>
+    <logger name="com.changhong.client" additivity="false">
+		<level value="INFO" />
+        <appender-ref ref="CLIENT_FILE" />
+	</logger>
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="SERVER_FILE"/>
+	</root>
+</log4j:configuration>

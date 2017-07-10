@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+  
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"  
+  version="2.0">  
+  
+    <description>Si Chuang Chang Hong</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>fns</short-name>
+    <uri>http://www.chanhong.com/fns</uri>
+    
+    <function>
+    	<description>box mac status info display function</description>
+    	<name>displayMacStatus</name>
+    	<function-class>com.changhong.common.web.tag.FunctionProcess</function-class>
+    	<function-signature>java.lang.String displayMacStatus(java.lang.String)</function-signature>
+    	<example>${fns:displayMacStatus(status)}</example>
+    </function>
+
+</taglib>

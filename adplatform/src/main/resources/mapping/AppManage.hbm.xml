@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  default-access="field">
+   <class name="com.changhong.system.domain.app.AppManage" table="app_manage">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="appName" column="app_name" insert="true" update="true" type="java.lang.String"/>
+        <property name="appVersion" column="app_version" insert="true" update="true" type="java.lang.String"/>
+        <property name="appType" column="app_type" insert="true" update="true" type="java.lang.String"/>
+        <property name="appVersionInfo" column="app_versioninfo" insert="true" update="true" type="java.lang.String"/>
+        <property name="appFileUrl" column="app_fileurl" insert="true" update="true" type="java.lang.String"/>
+        <property name="appEnabled" column="app_enabled" insert="true" update="true" type="java.lang.Boolean"/>
+    </class>
+    
+<!--     <class name="com.changhong.system.domain.app.AppUpdateHistory" table="app_update_history">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+        <property name="timestampDistribute" column="timestamp_distribute" type="java.util.Date"/>
+        <property name="appVersion" column="app_version" insert="true" update="true" type="java.lang.String"/>
+    </class> -->
+    
+    <class name="com.changhong.system.domain.app.AppPhoneManage" table="app_phone_manage">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="appName" column="app_name" insert="true" update="true" type="java.lang.String"/>
+        <property name="appVersion" column="app_version" insert="true" update="true" type="java.lang.String"/>
+        <property name="appType" column="app_type" insert="true" update="true" type="java.lang.String"/>
+        <property name="appVersionInfo" column="app_versioninfo" insert="true" update="true" type="java.lang.String"/>
+        <property name="appFileUrl" column="app_fileurl" insert="true" update="true" type="java.lang.String"/>
+        <property name="appEnabled" column="app_enabled" insert="true" update="true" type="java.lang.Boolean"/>
+    </class>
+    
+    <!-- 策略表 -->
+    <class name="com.changhong.system.domain.app.AppStrategy" table="app_strategy">
+       <id name="uuid" column="uuid" type="java.lang.String"/>
+       <property name="timestamp" column="timestamp_create" type="java.util.Date"/>
+	   <property name="timestampDistribute" column="timestamp_distribute" type="java.util.Date"/>
+       
+       <property name="name" column="name" insert="true" update="true" type="java.lang.String"/>
+       <property name="appVersion"  column="app_version" insert="true" update="true" type="java.lang.String"/>
+       <property name="strategyEnabled" column="app_strategy_enabled" insert="true" update="true" type="java.lang.Boolean"/>
+       <property name="strategyDistributeEnabled" column="app_strategy_distribute_enabled" insert="true" update="true" type="java.lang.Boolean"></property>
+    </class>
+    
+    <class name="com.changhong.system.domain.app.AppStrategyBox" table="app_strategy_box">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        
+        <property name="strategyUuid"  column="strategy_uuid" type="java.lang.String"/>
+        <property name="macNumber"  column="mac_number" type="java.lang.String"/>
+    </class>
+    
+    <class name="com.changhong.system.domain.app.AppStrategyCommunity" table="app_strategy_community">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        
+        <property name="strategyUuid"  column="strategy_uuid" type="java.lang.String"/>
+        <property name="communityUuid"  column="community_uuid" type="java.lang.String"/>
+    </class>
+    
+    <class name="com.changhong.system.domain.app.AppStrategyArea" table="app_strategy_area">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        
+        <property name="strategyUuid"  column="strategy_uuid" type="java.lang.String"/>
+        <property name="areaUuid"  column="area_uuid" type="java.lang.String"/>
+    </class>
+
+</hibernate-mapping>

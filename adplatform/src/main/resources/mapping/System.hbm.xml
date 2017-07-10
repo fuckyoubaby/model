@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+    <class name="com.changhong.system.domain.user.User" table="system_user">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="xingMing" column="user_xingming" insert="true" update="true" type="java.lang.String"/>
+        <property name="contactWay" column="user_contact" insert="true" update="true" type="java.lang.String"/>
+        <property name="username" column="user_username" insert="true" update="true" type="java.lang.String"/>
+        <property name="password" column="user_password" insert="true" update="true" type="java.lang.String"/>
+        <property name="enabled" column="user_enabled" insert="true" update="true" type="java.lang.Boolean"/>
+        <property name="code" column="user_code" insert="true" update="true" type="java.lang.String"/>
+        <property name="codeDate" column="user_code_date" insert="true" update="true" type="org.joda.time.contrib.hibernate.PersistentDateTime"/>
+    </class>
+
+    <class name="com.changhong.system.domain.log.ActionLog" table="system_action_log">
+        <id name="uuid" column="uuid" type="java.lang.String"/>
+        <property name="timestamp" column="timestamp" type="java.util.Date"/>
+
+        <property name="userUuid" column="user_uuid" insert="true" update="true" type="java.lang.String"/>
+        <property name="userXingMing" column="user_xingming" insert="true" update="true" type="java.lang.String"/>
+        <property name="actionDesc" column="action_desc" insert="true" update="true" type="java.lang.String"/>
+
+        <property name="actionType" column="action_type">
+            <type name="com.changhong.common.domain.EnumConverter">
+                <param name="enumClassName">com.changhong.system.domain.log.ActionType</param>
+            </type>
+        </property>
+        <property name="actionModule" column="action_module">
+            <type name="com.changhong.common.domain.EnumConverter">
+                <param name="enumClassName">com.changhong.system.domain.log.ActionModule</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>
