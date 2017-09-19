@@ -1,0 +1,7 @@
+1、com.hylanda.model.monitor  配置durid监控   http://localhost:9999/druid/index.html 查看数据源信息
+2. 集成shiro  进行权限管理,使用mybatis进行数据库访问, 
+	a.在application.properties中添加mapp.xml文件所在位置,已经mybatis的相关配置.
+	b.配置druid数据源   druidDataSourceConfiguration
+	c.添加userMapper.java和UserMapper.xml文件
+	d.编写userService
+	f.配置shiroConfig.java

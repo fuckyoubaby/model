@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Spring Security Example</title>
+</head>
+<body>
+login
+
+<!-- <h1>欢迎登录!${user.username }</h1>   ${pageContext.request.contextPath }-->
+    <!-- <form action="/loginUser" method="post">
+        <input type="text" name="username"><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="提交">
+    </form> -->
+	<!-- <div th:if="${param.error}">  
+            Invalid username and password.  
+        </div>  
+        <div th:if="${param.logout}">  
+            You have been logged out.  
+        </div>   -->
+	错误信息：
+	<h4 th:text="${msg}"></h4>
+	<form action="/loginUser" method="post">
+		<div>
+			<label> User Name : <input type="text" name="username" />
+			</label>
+		</div>
+		<div>
+			<label> Password: <input type="password" name="password" />
+			</label>
+		</div>
+		<div>
+			<input type="submit" value="Sign In" />
+		</div>
+		<input type="checkbox" name="remember-me" value="true"
+			th:checked="checked" />
+		<p>Remember me</p>
+	</form>
+</body>
+</html>

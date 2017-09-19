@@ -1,0 +1,116 @@
+2017-09-18 09:32:28,176 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 13640 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 09:32:28,178 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 09:32:28,178 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 09:32:31,631 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.645 seconds (JVM running for 3.925)
+2017-09-18 09:33:52,500 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_user where username=? 
+2017-09-18 09:33:52,610 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2017-09-18 09:33:52,752 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 09:33:52,755 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role_user where Sys_User_id=? 
+2017-09-18 09:33:52,757 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 09:33:52,770 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-18 09:33:52,772 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 09:33:52,773 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 0(Long)
+2017-09-18 09:33:52,779 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 0
+2017-09-18 09:33:52,779 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 09:33:52,780 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 0(Long)
+2017-09-18 09:33:52,780 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 0
+2017-09-18 09:35:20,308 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 7136 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 09:35:20,321 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 09:35:20,321 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 09:35:24,275 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 4.165 seconds (JVM running for 5.127)
+2017-09-18 09:36:10,553 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_user where username=? 
+2017-09-18 09:36:10,896 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2017-09-18 09:36:11,025 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 09:36:11,028 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role_user where Sys_User_id=? 
+2017-09-18 09:36:11,032 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 09:36:11,035 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-18 09:36:11,037 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 09:36:11,039 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 0(Long)
+2017-09-18 09:36:11,040 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 0
+2017-09-18 09:36:11,042 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 09:36:11,043 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 0(Long)
+2017-09-18 09:36:11,044 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 0
+2017-09-18 09:37:24,313 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_user where username=? 
+2017-09-18 09:37:24,316 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2017-09-18 09:37:24,324 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 09:37:39,618 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role_user where Sys_User_id=? 
+2017-09-18 09:37:39,624 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 09:37:39,635 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-18 10:11:13,345 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 11064 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 10:11:13,347 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 10:11:13,348 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 10:22:46,305 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 10520 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 10:22:46,307 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 10:22:46,307 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 10:29:03,975 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 2596 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 10:29:03,977 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 10:29:03,977 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 10:30:43,861 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 2368 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 10:30:43,863 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 10:30:43,863 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 10:30:47,203 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.537 seconds (JVM running for 3.819)
+2017-09-18 10:31:06,420 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_user where username=? 
+2017-09-18 10:31:06,507 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2017-09-18 10:31:06,521 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:06,523 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role_user where Sys_User_id=? 
+2017-09-18 10:31:06,524 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 10:31:06,526 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-18 10:31:06,526 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 10:31:06,527 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 10:31:06,528 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:06,529 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 10:31:06,529 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Long)
+2017-09-18 10:31:06,530 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:19,563 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_user where username=? 
+2017-09-18 10:31:19,564 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2017-09-18 10:31:19,565 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:19,566 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role_user where Sys_User_id=? 
+2017-09-18 10:31:19,567 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 10:31:19,569 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-18 10:31:19,569 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 10:31:19,570 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long)
+2017-09-18 10:31:19,571 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:19,571 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 10:31:19,572 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Long)
+2017-09-18 10:31:19,572 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:39,820 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_user where username=? 
+2017-09-18 10:31:39,820 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: sjx(String)
+2017-09-18 10:31:39,821 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:39,822 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role_user where Sys_User_id=? 
+2017-09-18 10:31:39,822 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Long)
+2017-09-18 10:31:39,823 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 10:31:39,824 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM sys_role where id=? 
+2017-09-18 10:31:39,824 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Long)
+2017-09-18 10:31:39,825 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-09-18 11:51:58,431 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 12168 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 11:51:58,454 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 11:51:58,455 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 11:52:01,475 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.236 seconds (JVM running for 3.539)
+2017-09-18 11:54:12,848 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 11380 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 11:54:12,850 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 11:54:12,850 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 11:54:15,785 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.128 seconds (JVM running for 3.406)
+2017-09-18 11:58:16,102 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 10236 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 11:58:16,103 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 11:58:16,104 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 11:58:19,031 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.123 seconds (JVM running for 3.404)
+2017-09-18 12:01:08,787 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 7644 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 12:01:08,788 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 12:01:08,788 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 12:01:11,687 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.093 seconds (JVM running for 3.371)
+2017-09-18 12:02:40,385 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 2596 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 12:02:40,386 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 12:02:40,387 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 12:02:43,257 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.061 seconds (JVM running for 3.34)
+2017-09-18 13:51:41,401 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 10524 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 13:51:41,403 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 13:51:41,403 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 13:51:44,252 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.044 seconds (JVM running for 3.32)
+2017-09-18 13:52:37,910 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 11236 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 13:52:37,912 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 13:52:37,912 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 13:52:40,776 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.055 seconds (JVM running for 3.335)
+2017-09-18 13:54:27,283 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 4848 (F:\sjx\workspace\xhw\model\model\target\classes started by Administrator in F:\sjx\workspace\xhw\model\model)
+2017-09-18 13:54:27,286 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-18 13:54:27,286 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-18 13:54:30,399 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.325 seconds (JVM running for 3.675)
