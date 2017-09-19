@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hylanda.model.common.mapper.StandardMediaNameMapper">
+    <resultMap type="com.hylanda.model.common.domain.StandardMediaName" id="standardMediaNameMap">
+        <id property="standardId" column="standard_id"/>
+        <result property="mediaName" column="media_name"/>
+        <result property="sityType" column="site_type"/>
+        <result property="tmCreate" column="tmcreate"/>
+        <result property="area" column="area"/>
+        <result property="isRank" column="is_rank"/>
+        <result property="url" column="url"/>
+        <result property="siteLevel" column="site_level"/>
+        <result property="areaMediaName" column="area_media_name"/>
+        
+        
+    </resultMap>
+    <select id="findAll" parameterType="string" resultMap="standardMediaNameMap">
+        SELECT * FROM standard_medianame
+    </select>
+</mapper>

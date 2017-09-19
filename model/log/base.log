@@ -128,3 +128,33 @@
 2017-09-19 14:07:48,831 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,r.*,m.* FROM user u inner join user_role ur on ur.uid=u.uid inner join role r on r.rid=ur.rid inner join module_role mr on mr.rid=r.rid inner join module m on mr.mid=m.mid WHERE username=?; 
 2017-09-19 14:07:48,914 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
 2017-09-19 14:07:48,931 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2017-09-19 16:23:26,160 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 8364 (F:\gitRepository\model\target\classes started by Administrator in F:\gitRepository\model)
+2017-09-19 16:23:26,162 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-19 16:23:26,163 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-19 16:23:40,858 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 3900 (F:\gitRepository\model\target\classes started by Administrator in F:\gitRepository\model)
+2017-09-19 16:23:40,861 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-19 16:23:40,861 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-19 16:23:43,827 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.155 seconds (JVM running for 3.429)
+2017-09-19 16:24:01,128 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,r.*,m.* FROM user u inner join user_role ur on ur.uid=u.uid inner join role r on r.rid=ur.rid inner join module_role mr on mr.rid=r.rid inner join module m on mr.mid=m.mid WHERE username=?; 
+2017-09-19 16:24:01,212 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2017-09-19 16:24:01,227 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2017-09-19 16:24:19,480 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT * FROM standard_medianame 
+2017-09-19 16:24:19,483 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2017-09-19 16:24:20,045 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 12881
+2017-09-19 16:31:02,790 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 3180 (F:\gitRepository\model\target\classes started by Administrator in F:\gitRepository\model)
+2017-09-19 16:31:02,791 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-19 16:31:02,791 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-19 16:31:05,837 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.233 seconds (JVM running for 3.513)
+2017-09-19 16:31:21,189 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,r.*,m.* FROM user u inner join user_role ur on ur.uid=u.uid inner join role r on r.rid=ur.rid inner join module_role mr on mr.rid=r.rid inner join module m on mr.mid=m.mid WHERE username=?; 
+2017-09-19 16:31:21,274 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: sjx(String)
+2017-09-19 16:31:21,289 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-19 16:31:46,708 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,r.*,m.* FROM user u inner join user_role ur on ur.uid=u.uid inner join role r on r.rid=ur.rid inner join module_role mr on mr.rid=r.rid inner join module m on mr.mid=m.mid WHERE username=?; 
+2017-09-19 16:31:46,709 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: sjx(String)
+2017-09-19 16:31:46,711 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-09-19 16:35:38,455 INFO (StartupInfoLogger.java:48)- Starting ModelApplication on 2013-20150326TN with PID 12704 (F:\gitRepository\model\target\classes started by Administrator in F:\gitRepository\model)
+2017-09-19 16:35:38,457 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2017-09-19 16:35:38,457 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-09-19 16:35:41,497 INFO (StartupInfoLogger.java:57)- Started ModelApplication in 3.23 seconds (JVM running for 3.51)
+2017-09-19 16:35:52,353 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,r.*,m.* FROM user u inner join user_role ur on ur.uid=u.uid inner join role r on r.rid=ur.rid inner join module_role mr on mr.rid=r.rid inner join module m on mr.mid=m.mid WHERE username=?; 
+2017-09-19 16:35:52,438 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: sjx(String)
+2017-09-19 16:35:52,452 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
