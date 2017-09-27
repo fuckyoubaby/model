@@ -10,4 +10,7 @@ import com.hylanda.model.common.domain.StandardMediaName;
 public interface StandardMediaNameMapper {
 
 	List<StandardMediaName> findAll();
+	int insert(StandardMediaName standardMediaName);
+	int update(StandardMediaName standardMediaName);
+	int delete(Long id);
 }

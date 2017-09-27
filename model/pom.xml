@@ -83,6 +83,14 @@
 			<version>1.4.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.2.1</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

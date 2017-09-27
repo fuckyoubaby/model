@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
-<title>Spring Security Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content=""/>
+    <meta name="author" content="ThemeBucket"/>
+    <!-- <link rel="shortcut icon" href="#" type="image/png" /> -->
+    <title>Login</title>
+    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/style-responsive.css}" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-login
 
-<!-- <h1>欢迎登录!${user.username }</h1>   ${pageContext.request.contextPath }-->
-    <!-- <form action="/loginUser" method="post">
-        <input type="text" name="username"><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="提交">
-    </form> -->
-	<!-- <div th:if="${param.error}">  
-            Invalid username and password.  
-        </div>  
-        <div th:if="${param.logout}">  
-            You have been logged out.  
-        </div>   -->
-	错误信息：
-	<h4 th:text="${msg}"></h4>
-	<form action="/loginUser" method="post">
-		<div>
-			<label> User Name : <input type="text" name="username" />
-			</label>
-		</div>
-		<div>
-			<label> Password: <input type="password" name="password" />
-			</label>
-		</div>
-		<div>
-			<input type="submit" value="Sign In" />
-		</div>
-		<input type="checkbox" name="remember-me" value="true"
-			th:checked="checked" />
-		<p>Remember me</p>
-	</form>
+<body class="login-body">
+
+<div class="container">
+    <form class="form-signin" action="/loginUser">
+        <div class="form-signin-heading text-center">
+            <h1 class="sign-title">Sign In</h1>
+            <!--<img src="images/login-logo.png" alt=""/>-->
+        </div>
+        <div class="login-wrap" style="margin-top: 200px;">
+            <input type="text" class="form-control" name="username"  placeholder="username" autofocus="autofocus" />
+            <input type="password" class="form-control" name="password" placeholder="password" />
+            <button class="btn btn-lg btn-login btn-block" type="submit">
+                sign in
+            </button>
+        </div>
+    </form>
+
+</div>
+
+<script th:src="@{js/jquery-1.10.2.min.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+<script th:src="@{js/modernizr.min.js}"></script>
+
 </body>
 </html>

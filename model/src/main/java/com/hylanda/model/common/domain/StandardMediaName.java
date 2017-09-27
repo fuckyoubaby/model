@@ -6,7 +6,7 @@ public class StandardMediaName {
 
 	private Long standardId;
 	private String mediaName;
-	private String sityType;
+	private String siteType;
 	private Date tmCreate;
 	private String area;
 	private int isRank;
@@ -25,11 +25,11 @@ public class StandardMediaName {
 	public void setMediaName(String mediaName) {
 		this.mediaName = mediaName;
 	}
-	public String getSityType() {
-		return sityType;
+	public String getSiteType() {
+		return siteType;
 	}
-	public void setSityType(String sityType) {
-		this.sityType = sityType;
+	public void setSityType(String siteType) {
+		this.siteType = siteType;
 	}
 	public Date getTmCreate() {
 		return tmCreate;

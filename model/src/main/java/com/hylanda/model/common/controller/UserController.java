@@ -1,6 +1,9 @@
 package com.hylanda.model.common.controller;
 
 
+import java.util.Iterator;
+import java.util.Set;
+
 import javax.servlet.http.HttpSession;
 
 import org.apache.shiro.SecurityUtils;
@@ -12,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.hylanda.model.ModelApplication;
+import com.hylanda.model.domain.Role;
 import com.hylanda.model.domain.User;
 
 @Controller
@@ -30,12 +34,33 @@ public class UserController {
     public String loginUser(String username,String password,HttpSession session) {
         UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(username,password);
         Subject subject = SecurityUtils.getSubject();
+        
+        boolean isAdmin = false;  //是否是管理员
+        
         try {
             subject.login(usernamePasswordToken);   //完成登录
             User user=(User) subject.getPrincipal();
+            Set<Role> roles = user.getRoles();
+            Iterator<Role> it = roles.iterator();  
+            while (it.hasNext()) {  
+              Role role = it.next(); 
+              if (role.getRname().equals("admin")) {
+				isAdmin = true;
+              }
+            }  
+          
+            
+            
             session.setAttribute("user", user);
-            return "index";
+            
+			if (isAdmin) {
+				//return new ModelAndView("admin/index");
+				return "admin/index";			
+			}
+			//return new ModelAndView("index");
+            return "user/index";
         } catch(Exception e) {
+        	//return new ModelAndView("login");
             return "login";//返回登录页面
         }
         

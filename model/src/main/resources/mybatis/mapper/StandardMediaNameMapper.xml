@@ -4,7 +4,7 @@
     <resultMap type="com.hylanda.model.common.domain.StandardMediaName" id="standardMediaNameMap">
         <id property="standardId" column="standard_id"/>
         <result property="mediaName" column="media_name"/>
-        <result property="sityType" column="site_type"/>
+        <result property="siteType" column="site_type"/>
         <result property="tmCreate" column="tmcreate"/>
         <result property="area" column="area"/>
         <result property="isRank" column="is_rank"/>
@@ -17,4 +17,50 @@
     <select id="findAll" parameterType="string" resultMap="standardMediaNameMap">
         SELECT * FROM standard_medianame
     </select>
+    <!-- <insert id="insertStandardMediaName" parameterType="standardMediaNameMap" >
+    	insert into standard_medianame 
+    </insert> -->
+    
+    <insert id="insert" parameterType="com.hylanda.model.common.domain.StandardMediaName" useGeneratedKeys="true" keyProperty="id" >
+		INSERT INTO standard_medianame (
+			media_name,
+			site_type,
+			tmcreate,
+			area,
+			is_rank,
+			url,
+			site_level,
+			area_media_name
+		) VALUES (
+			#{mediaName},
+			#{siteType},
+			NOW(),
+			#{area},
+			#{isRank},
+			#{url},
+			#{siteLevel},
+			#{areaMediaName}
+		);
+	</insert>
+	<update id="update" parameterType="com.hylanda.model.common.domain.StandardMediaName" >
+		UPDATE standard_medianame
+		SET 
+			media_name = #{mediaName},
+			site_type = #{siteType},
+			tmcreate=NOW(),
+			area = #{area},
+			is_rank = #{isRank},
+			url = #{url},
+			site_level = #{siteLevel},
+			area_media_name = #{areaMediaName} 
+		WHERE standard_id = #{standardId}
+	</update>
+	
+	<delete id="delete" parameterType="java.util.HashMap">
+		DELETE
+		FROM standard_medianame
+		WHERE standard_id = #{standardId}
+	</delete>
+	
+	
 </mapper>
